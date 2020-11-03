@@ -1,21 +1,21 @@
 
 
-const inittialState ={
-    name:'shantinagar'
+const inittialState = {
+    name: 'shantinagar'
 }
 
-const Reducer = (state = inittialState , action) =>{
+const Reducer = (state = inittialState, action) => {
 
-console.log(action)
-if(action.type === "CHANGE_NAME"){
+    console.log(action)
+    if (action.type === "CHANGE_NAME") {
 
-    return {
-        ...state,
-        name : action.payload
-    
+        return {
+            ...state,
+            name: action.payload
+
+        }
+
     }
-
-}
     return state;
 }
 export default Reducer
