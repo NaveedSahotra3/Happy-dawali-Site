@@ -27,8 +27,9 @@ const Happy = (props) => {
                 {/* <h1>O No</h1> */}
             </div>
         <div className="Main__app">
-            <h3>Happy Dawali From <strong style={{color :'red'}}> {props.match.params.fullname} </strong></h3>
         <img className="Gif__Dawali" src={require('./Diwali-Wishes-GIF-Images.gif')} />
+            <i> <h3>From 
+                <strong  className="user_name_to_show"> {props.match.params.fullname} </strong></h3></i>
         <br/>
 
         <Link to="/inputname">

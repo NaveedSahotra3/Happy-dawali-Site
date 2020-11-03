@@ -11,9 +11,7 @@ const Body = () => {
 const [state, setstate] = useState({
     landingPageData: {},
 })
-// coonst getlandingPageData = ()=> {
-//    setState({ landingPageData: JsonData })
-//   }
+
     return (<div>
 
 <div style={{ marginTop: '100px' }}>
