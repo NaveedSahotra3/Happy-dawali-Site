@@ -95,9 +95,9 @@ const InputName = (props) => {
             <div id="footer">
                 <div className="container text-center">
                     <p>
-                        &copy; 2020 Issaaf Kattan React Land Page Template. Design by{" "}
-                        <a href="http://www.templatewire.com" rel="nofollow">
-                            TemplateWire
+                        &copy; Festival Wishing Developed by{" "}
+                        <a href="#" rel="nofollow">
+                            Coding Trip
               </a>
                     </p>
                 </div>

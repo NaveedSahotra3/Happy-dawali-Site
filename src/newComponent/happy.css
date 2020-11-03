@@ -1,9 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    background: #000;
+    background:#090d19;
     overflow: hidden; }
-  
+
+  .before h2{
+    color: white;
+  }
   .pyro > .before, .pyro > .after {
     position: absolute;
     width: 5px;
@@ -184,31 +187,37 @@ body {
       margin-top: 30%;
       margin-left: 80%; } }
 
-      
-
-      .Gif__Dawali{
-        width: 250px;
-        height: 250px;
-      }
+    
       .happy__botton{
-        /* border: none; */
         font-family: 'Raleway', sans-serif;
         text-transform: uppercase;
         color: #fff;
         background-color: #5ca9fb;
         background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
-        padding: 14px 34px;
+        padding: 10px 34px;
         letter-spacing: 1px;
         margin: 0;
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 500;
         border-radius: 25px;
         transition: all 0.5s linear;
         /* border: 0; */
         border: none;
         outline: none;
-        margin-top: 10px;
+        margin-top: 5px;
+      }
+      .Main__app h3{
+        color: white;
       }
       .Main__app{
         margin: auto;
+        text-align: center;
+      }
+      .user_name_to_show{
+        text-transform: capitalize;
+        color: black;
+        text-shadow: 0px 0px 2px white;
+      }
+      .Gif__Dawali{
+        width: 300px
       }
