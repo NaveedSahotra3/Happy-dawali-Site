@@ -6,18 +6,21 @@ import { Router, Route } from 'react-router-dom'
 import Header from '../../components/header';
 import JsonData from '../../data/data.json';
 import Carousel from '../../newComponent/carousel/carousel'
-
+import Card from '../../newComponent/carousel/cards'
 const Body = () => {
 const [state, setstate] = useState({
     landingPageData: {},
 })
 
-    return (<div>
+    return (
+    <div>
 
 <div style={{ marginTop: '100px' }}>
 
 <Route path="/" exact component={Carousel}  />
 <Route path="/inputname" exact component={InputName} />
+<Route path="/card" exact component={Card} />
+
 <Route path="/happy/:fullname" component={Happy} />
 
 </div>

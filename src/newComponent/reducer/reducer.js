@@ -1,7 +1,7 @@
 
 
 const inittialState = {
-    name: 'shantinagar'
+    name: ''
 }
 
 const Reducer = (state = inittialState, action) => {

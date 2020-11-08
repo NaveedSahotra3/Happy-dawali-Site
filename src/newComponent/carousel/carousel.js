@@ -71,11 +71,11 @@ class Carousel extends React.Component {
             ></div>
           ))}
         </Slider>
-        <div className="card_wrapper">
+        {/* <div className="card_wrapper">
           {this.content2.map((item, index) => {
             return <Card />;
           })}
-        </div>
+        </div> */}
       </div>
     );
   }

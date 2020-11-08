@@ -1,7 +1,29 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link, NavLink, Router } from "react-router-dom";
 
+const state = {
+
+  name: ' '
+
+}
 export class Navigation extends Component {
+
+
+  constructor(props) {
+    super(props)
+    this.getValue = (e) => {
+      console.log(e)
+      console.log(e.target.name)
+      this.setState({
+        name: e.target.name
+      })
+      props.changeName(e.target.name)
+    }
+
+  }
+
+
   render() {
     return (
       <nav id="menu" className="navbar navbar-default navbar-fixed-top">
@@ -33,11 +55,17 @@ export class Navigation extends Component {
           >
             <ul className="nav navbar-nav navbar-right">
               {/* <Router> */}
-              <NavLink className="AdjLink" to="/inputname" style={{ textDecoration: 'none', color: 'black' }}>
-           
-                <a href="#portfolio" className="page-scroll">
-                Dawali
-                </a>
+              <NavLink className="AdjLink" onClick={this.getValue} name="Dawali" to="/card" style={{ textDecoration: 'none', color: 'black' }}>
+
+                {/* <a href="#portfolio" className="page-scroll"> */}
+                  Dawali
+                {/* </a> */}
+              </NavLink>
+              <NavLink className="AdjLink" to="/card" onClick={this.getValue} name="Dussehra" style={{ textDecoration: 'none', color: 'black' }}>
+
+                {/* <a href="#portfolio" className="page-scroll"> */}
+                  Dussehra
+           {/* </a> */}
               </NavLink>
               {/* </Router> */}
               {/* <li>
@@ -78,4 +106,16 @@ export class Navigation extends Component {
   }
 }
 
-export default Navigation;
+
+const mapDispatchToProps = (Dispatch) => {
+  return {
+    changeName: (name) => {
+      Dispatch({
+        type: "CHANGE_NAME",
+        payload: name
+      })
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Navigation);
