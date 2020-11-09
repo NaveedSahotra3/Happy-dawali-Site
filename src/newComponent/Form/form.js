@@ -46,7 +46,7 @@ const InputName = (props) => {
                                 <p>
                                     Please fill out the form below to send us an email and we
                                     will get back to you as soon as possible.
-                  </p>
+                               </p>
                             </div>
                             <form onSubmit={handleSubmut} name="" id="contactForm" >
                                 <div className="row">
@@ -61,6 +61,19 @@ const InputName = (props) => {
                                                 onChange={handleChange}
                                             // onChange={e => state.Name = e.target.value }
                                             />
+                                             <textarea
+                                                type="text"
+                                                id="name"
+                                                className="form-control"
+                                                placeholder="Custom Message"
+                                                required="required"
+                                                onChange={handleChange}
+                                                style={{marginTop:'10px' , height:'94px'}}
+                                                >
+                                             
+                                            {/* // onChange={e => state.Name = e.target.value }  */}
+                                            
+                                            </textarea>
                                             <p className="help-block text-danger"></p>
                                         </div>
                                     </div>

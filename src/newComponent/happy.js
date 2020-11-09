@@ -22,7 +22,8 @@ const Happy = (props) => {
         <div class="container-fluid pyro">
             <div class="before">
                 <h2 >
-                    Happy Dawali..!
+                    {/* Happy Dawali..! */}
+                    {" Happy" +props.myData}
                     {/* {props.match.params.fullname} */}
                 </h2>
             </div>
