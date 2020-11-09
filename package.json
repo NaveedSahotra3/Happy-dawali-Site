@@ -8,8 +8,18 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "animate.css": "^4.1.1",
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "emotion": "^10.0.27",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "history": "^5.0.0",
+    "mongoose": "^5.10.13",
+    "multer": "^1.4.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "react": "^16.13.1",
     "react-animated-slider": "^2.0.0",
     "react-custom-share": "^0.4.8",
@@ -29,6 +39,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "http://localhost:6070",
   "browserslist": {
     "production": [
       ">0.2%",

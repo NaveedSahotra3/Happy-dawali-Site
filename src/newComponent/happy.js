@@ -36,7 +36,7 @@ const Happy = (props) => {
                 <strong className="user_name_to_show"> {props.match.params.fullname} </strong></h3></i>
                 <br />
 
-                <Link to="/inputname">
+                <Link to="/">
                     <button class="animate__animated animate__bounceInLeft happy__botton"> Create Your Own ..!</button>
                 </Link>
 

@@ -76,6 +76,16 @@ class Carousel extends React.Component {
             return <Card />;
           })}
         </div> */}
+           <div id="footer">
+                <div className="container text-center">
+                    <p>
+                        &copy; Festival Wishing Developed by{" "}
+                        <a href="#" rel="nofollow">
+                            Coding Trip
+              </a>
+                    </p>
+                </div>
+            </div>
       </div>
     );
   }

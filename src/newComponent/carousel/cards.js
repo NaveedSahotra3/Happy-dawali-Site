@@ -14,9 +14,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
     marginBottom: 30,
-    height: 280,
+    height: 260,
     width: 350,
-    margin: 20
+    marginLeft: '6%'
   },
   media: {
     height: 0,
@@ -67,25 +67,25 @@ const content = [
     name: 'dawali',
     src: "Happy-Diwali"
   },
-  {
-    name: 'Dussehra',
-    src: "Happy-Diwali"
-  },  {
-    name: 'Dussehra',
-    src: "Happy-Diwali"
-  },  {
-    name: 'Dussehra',
-    src: "Happy-Diwali"
-  },  {
-    name: 'Dussehra',
-    src: "Happy-Diwali"
-  },  {
-    name: 'Dussehra',
-    src: "Happy-Diwali"
-  },  {
-    name: 'Dussehra',
-    src: "Happy-Diwali"
-  },
+  // {
+  //   name: 'Dussehra',
+  //   src: "Happy-Diwali"
+  // },  {
+  //   name: 'Dussehra',
+  //   src: "Happy-Diwali"
+  // },  {
+  //   name: 'Dussehra',
+  //   src: "Happy-Diwali"
+  // },  {
+  //   name: 'Dussehra',
+  //   src: "Happy-Diwali"
+  // },  {
+  //   name: 'Dussehra',
+  //   src: "Happy-Diwali"
+  // },  {
+  //   name: 'Dussehra',
+  //   src: "Happy-Diwali"
+  // },
 
 ]
 
@@ -146,7 +146,16 @@ function RecipeReviewCard(props) {
           // : null 
         }
       </div>
-
+      <div id="footer">
+                <div className="container text-center">
+                    <p>
+                        &copy; Festival Wishing Developed by{" "}
+                        <a href="#" rel="nofollow">
+                            Coding Trip
+              </a>
+                    </p>
+                </div>
+            </div>
     </div>
 
   );

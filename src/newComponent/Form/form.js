@@ -1,30 +1,50 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from "react-router-dom";
 import Navigation from '../../components/navigation'
+import axios from 'axios'
 import { connect } from 'react-redux'
 const InputName = (props) => {
     const history = useHistory();
     const [state, setState] = useState(
         {
-            Name: ''
+            name: '',
+            message: ''
         }
     )
 
-    const handleChange = (event) => {
-        console.log(event.target.value)
+    const handleChange = (e) => {
+        console.log(e.target.value)
 
-        setState({
-            Name: event.target.value
-        })
+        setState({ ...state, [e.target.name]: e.target.value })
+
+
         console.log(state)
 
     }
-    const handleSubmut = (event) => {
-        event.preventDefault();
+    const submitData = (e) => {
+        e.preventDefault();
+        console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
         // history.push("../happy.js");
         console.log(state)
+        axios.post('/signup', state ).then(res=>{
+            console.log(res)
+                })
+        // axios.post({
 
-        props.changeName(state)
+        //     url: '/sendpostreq',
+        //     data: state,
+        //     // headers: {'Content-Type': 'multipart/form-data' }
+        // })
+        //     .then(function (response) {
+               
+        //         console.log(response);
+        //     })
+        //     .catch(function (response) {
+           
+        //         console.log(response);
+        //     });
+
+        // props.changeName(state)
 
     }
 
@@ -48,31 +68,33 @@ const InputName = (props) => {
                                     will get back to you as soon as possible.
                                </p>
                             </div>
-                            <form onSubmit={handleSubmut} name="" id="contactForm" >
+                            <form name="" id="contactForm" enctype="multipart/form-data" >
                                 <div className="row">
                                     <div className="col-md-6">
                                         <div className="form-group">
                                             <input
                                                 type="text"
                                                 id="name"
+                                                name="name"
                                                 className="form-control"
                                                 placeholder="Name"
                                                 required="required"
-                                                onChange={handleChange}
-                                            // onChange={e => state.Name = e.target.value }
+                                                // onChange={handleChange}
+                                                onChange={e => state.Name = e.target.value}
                                             />
-                                             <textarea
+                                            <textarea
                                                 type="text"
                                                 id="name"
                                                 className="form-control"
                                                 placeholder="Custom Message"
                                                 required="required"
+                                                name="message"
                                                 onChange={handleChange}
-                                                style={{marginTop:'10px' , height:'94px'}}
-                                                >
-                                             
-                                            {/* // onChange={e => state.Name = e.target.value }  */}
-                                            
+                                                style={{ marginTop: '10px', height: '94px' }}
+                                            // onChange={e => state.message = e.target.value } 
+                                            >
+
+
                                             </textarea>
                                             <p className="help-block text-danger"></p>
                                         </div>
@@ -91,8 +113,8 @@ const InputName = (props) => {
                     <p className="help-block text-danger"></p>
                   </div> */}
                                 <div id="success"></div>
-                                <Link to={`/happy/${state.Name}`}>
-                                    <button type="submit" className="btn btn-custom btn-lg">
+                                <Link  to={`/happy/${state.Name}`}>
+                                    <button onClick={submitData} type="submit" className="btn btn-custom btn-lg">
                                         Submit
                                 </button>
                                 </Link>
