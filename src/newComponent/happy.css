@@ -1,8 +1,16 @@
 body {
     margin: 0;
     padding: 0;
-    background:#090d19;
-    overflow: hidden; }
+    /* background:#090d19; */
+    overflow: hidden;
+    background-image: url('./body/giphy.gif'); 
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    background-position: center center;
+    background-size: cover;
+    height: fit-content !important;
+  }
+    
 
   .before h2{
     color: white;
