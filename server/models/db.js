@@ -12,7 +12,7 @@ let mongoose = require('mongoose');
 // })
 
 // mongoose.connect("mongodb://localhost:27017",
-mongoose.connect("mongodb+srv://SardarSahotra:sardarns@cluster0-nk9lq.mongodb.net/test?retryWrites=true&w=majority",
+mongoose.connect("mongodb+srv://dawali:dawali@cluster0.6drqe.mongodb.net/dawali?retryWrites=true&w=majority",
 
     { useNewUrlParser: true, useUnifiedTopology: true })
     .then(()=>{

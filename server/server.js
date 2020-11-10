@@ -6,7 +6,8 @@ let cors = require('cors');
 let myApp = express();
 myApp.use(bd.json());
 let User = require('./models/user');
-require ('./models/db')
+const { json } = require('body-parser');
+require('./models/db')
 
 
 
@@ -28,12 +29,29 @@ myApp.post('/signup', (req, res, next) => {
         console.log(item)
         console.log("working");
     })
-    res.json({ success: true });
+    res.json({ success: true, newUser });
 
 })
 
 
+myApp.get('/users', function (req, res) {
+    let newUsers = User.find((item) => {
+        return item
+    })
+    res.json(User);
+    console.log(newUsers.name)
+    return newUsers
+    // User.find({}, function (err, userList) {
+    //     res.json({
+    //         userList
+    //     })
+    //     console.log(userList)
+    //     console.log(json(userList.message))
+    //     console.log(json(userList._id))
 
+
+    // })
+})
 
 
 

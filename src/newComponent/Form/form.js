@@ -28,7 +28,16 @@ const InputName = (props) => {
         console.log(state)
         axios.post('/signup', state ).then(res=>{
             console.log(res)
+            if(res.status === 200){
+                axios.get('/users' ).then(res=>{
+                    console.log(res.User)
+                        })
+
+            }
                 })
+                
+                
+              
         // axios.post({
 
         //     url: '/sendpostreq',
