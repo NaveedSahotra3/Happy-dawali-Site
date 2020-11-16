@@ -223,8 +223,8 @@ body {
       }
       .user_name_to_show{
         text-transform: capitalize;
-        color: black;
-        text-shadow: 0px 0px 2px white;
+        color: red;
+        text-shadow: 0px 0px 2px black;
       }
       .Gif__Dawali{
         width: 300px

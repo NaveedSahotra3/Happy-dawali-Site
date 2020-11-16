@@ -55,13 +55,13 @@ export class Navigation extends Component {
           >
             <ul className="nav navbar-nav navbar-right">
               {/* <Router> */}
-              <NavLink className="AdjLink" onClick={this.getValue} name="Dawali" to="/card" style={{ textDecoration: 'none', color: 'black' }}>
+              <NavLink className="AdjLink" onClick={this.getValue} name="Dawali" to="/card" style={{ textDecoration: 'none', color: 'black', display: 'block' }}>
 
                 {/* <a href="#portfolio" className="page-scroll"> */}
                   Dawali
                 {/* </a> */}
               </NavLink>
-              <NavLink className="AdjLink" to="/card" onClick={this.getValue} name="Dussehra" style={{ textDecoration: 'none', color: 'black' }}>
+              <NavLink className="AdjLink" to="/card" onClick={this.getValue} name="Dussehra" style={{ textDecoration: 'none', color: 'black',display: 'block' }}>
 
                 {/* <a href="#portfolio" className="page-scroll"> */}
                   Dussehra
